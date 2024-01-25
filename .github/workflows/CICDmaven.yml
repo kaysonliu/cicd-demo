@@ -138,7 +138,7 @@ jobs:
         run: npm i -g @railway/cli
       - name: Deploy to Railway
         run: |
-          railway login
+          RAILWAY_INTERACTIVE=true railway login
           railway link
           railway up        
         env:
