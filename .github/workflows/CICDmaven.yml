@@ -119,6 +119,8 @@ jobs:
           #From this path
           path: target/cicd-demo-0.0.1-SNAPSHOT.jar
   deploy:
+    #Depends on build's job
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
