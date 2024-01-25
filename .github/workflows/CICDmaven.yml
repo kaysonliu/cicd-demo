@@ -141,8 +141,7 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          RAILWAY_INTERACTIVE=true 
-          railway login 
+          RAILWAY_INTERACTIVE=true railway login 
 
         
       # - name: Deploy to Railway
