@@ -124,14 +124,14 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Download JAR
-    #Download the artifact which was uploaded in the build's job
-      uses: actions/download-artifact@v2
-      with:
-        name: artifact
-    - name: Install Railway CLI
-      run: npm i -g @railway/cli
-    - name: Deploy to Railway
-      run: railway up
-      env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Download JAR
+      #Download the artifact which was uploaded in the build's job
+        uses: actions/download-artifact@v2
+        with:
+          name: artifact
+      - name: Install Railway CLI
+        run: npm i -g @railway/cli
+      - name: Deploy to Railway
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
