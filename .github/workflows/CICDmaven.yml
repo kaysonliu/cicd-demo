@@ -30,6 +30,11 @@ jobs:
       - name: Run Test with Maven
         # run: mvn -B test
         run: mvn -B -Dmaven.test.failure.ignore=true test
+        
+      - name: Use Node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
   sonar:
     needs: test
